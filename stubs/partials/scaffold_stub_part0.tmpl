@@ -1,0 +1,14 @@
+
+##
+## inherits the layout defined in pow.cfg as default_layout
+## is there rendered as self.body()
+##
+<%!
+
+	import sys,os 
+	sys.path.append(os.path.abspath(os.path.join( os.path.dirname(os.path.abspath("./")), "../../lib" )) )
+	import powlib
+	import pow_html_helper as helper
+	hidden_list = ["created", "last_updated", "group", "user", "id", "password"]
+%>
+<%inherit file="/${context.get('template')}"/>
